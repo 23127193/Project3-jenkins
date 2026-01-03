@@ -40,7 +40,7 @@ pipeline {
                     sh "docker rm my-flask-app || true"
                     
                     // Chạy container mới trực tiếp trên máy local
-                    sh "docker run -d --name my-flask-app -p 5000:5000 ${DOCKER_IMAGE}:latest"
+                    sh "docker run -d --rm --name my-flask-app -p 5000:5000 ${DOCKER_IMAGE}:latest"
                     
                     echo "Ứng dụng đã được deploy thành công tại http://localhost:5000"
                 }
