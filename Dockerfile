@@ -17,7 +17,7 @@ COPY pyproject.toml uv.lock ./
 RUN uv venv /opt/venv && uv sync --frozen
 
 # Stage 2: Runtime stage - a clean, slim image for production
-FROM python:3.13-slim-bookworm AS runtime
+FROM python:3.12-slim AS runtime
 
 # Set the same working directory
 WORKDIR /app
