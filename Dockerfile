@@ -32,4 +32,4 @@ ENV PATH="/opt/venv/bin:$PATH"
 COPY src/ ./src/
 
 # Command to run your application
-CMD ["python", "src/your_app.py"]
+CMD ["python", "src/app.py"]
